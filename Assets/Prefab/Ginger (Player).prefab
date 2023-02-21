@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 1687799080047353972}
   - component: {fileID: 492837510}
   - component: {fileID: 7604231985933958961}
+  - component: {fileID: 2473631583294437508}
+  - component: {fileID: 7408752830528684752}
   m_Layer: 0
   m_Name: Ginger (Player)
   m_TagString: Untagged
@@ -144,3 +146,45 @@ CapsuleCollider2D:
   m_Offset: {x: -0.06197107, y: -0.06999999}
   m_Size: {x: 0.6458795, y: 1}
   m_Direction: 0
+--- !u!114 &2473631583294437508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1687799080047353975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: a66dd11239e92e14cb9f6a5692601abc, type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Player
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
+--- !u!114 &7408752830528684752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1687799080047353975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 834c8e923fadaa24697348c2f49b25e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
