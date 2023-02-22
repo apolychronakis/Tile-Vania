@@ -8346,7 +8346,7 @@ GameObject:
   - component: {fileID: 1550152948}
   m_Layer: 11
   m_Name: Goober (Enemy)
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8684,14 +8684,6 @@ PrefabInstance:
     - target: {fileID: 1687799080047353975, guid: dfc9c3efe54b9c847870e1f1ac5ff2ed, type: 3}
       propertyPath: m_Name
       value: Ginger (Player)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7408752830528684752, guid: dfc9c3efe54b9c847870e1f1ac5ff2ed, type: 3}
-      propertyPath: deathKick.x
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 7408752830528684752, guid: dfc9c3efe54b9c847870e1f1ac5ff2ed, type: 3}
-      propertyPath: deathKick.y
-      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dfc9c3efe54b9c847870e1f1ac5ff2ed, type: 3}
