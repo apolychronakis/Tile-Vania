@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float runSpeed = 10f;
     [SerializeField] float jumpSpeed = 5f;
     [SerializeField] float climbSpeed = 5f;
+    [SerializeField] Vector2 deathKick = new Vector2(10f, 10f);
 
     Vector2 moveInput;
     Rigidbody2D myRigidbody;
@@ -20,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
 
     float gravityScaleAtStart;
 
+    bool isAlive = true;
 
     private void Start()
     {
@@ -28,23 +30,34 @@ public class PlayerMovement : MonoBehaviour
         myCapsuleCollider = GetComponent<Collider2D>();
         myFeetCollider = GetComponent<BoxCollider2D>();
         gravityScaleAtStart = myRigidbody.gravityScale;
+
+
     }
 
     private void Update()
     {
+        if(!isAlive) { return; }
+
         Run();
         FlipSprite();
-
         ClimbLadder();
+
+        Die();
     }
+
+
     void OnMove(InputValue value)
     {
+        if (!isAlive) { return; }
+
         moveInput = value.Get<Vector2>();
         Debug.Log(moveInput);
     }
 
     void OnJump(InputValue value)
     {
+        if (!isAlive) { return; }
+
         if (!myFeetCollider.IsTouchingLayers(LayerMask.GetMask("Ground"))) { return; }
 
         if (value.isPressed)
@@ -88,5 +101,15 @@ public class PlayerMovement : MonoBehaviour
         myAnimator.SetBool("isClimbing", playerHorizontaVerticalSpeed);
     }
 
+
+    private void Die()
+    {
+        if(myCapsuleCollider.IsTouchingLayers(LayerMask.GetMask("Enemies", "Hazards")))
+        {
+            isAlive = false;
+            myAnimator.SetTrigger("Dying");
+            myRigidbody.velocity = deathKick;
+        }
+    }
 
 }
